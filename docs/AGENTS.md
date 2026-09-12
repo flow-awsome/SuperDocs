@@ -2,9 +2,9 @@
 
 이 파일은 새 AI 세션이 이 프로젝트에 처음 투입될 때 가장 먼저 읽는 문서다. "이 프로젝트가 무엇인지", "AI가 어떻게 행동해야 하는지"를 한 화면 분량으로 압축해 전달하는 것이 목적이다. 세부 내용은 각 하위 문서로 링크하고, 여기서는 뼈대만 유지한다 (토큰 최적화 원칙). 지금 이 순간의 상태는 [00-control-tower/project-dashboard.md](00-control-tower/project-dashboard.md)가 더 정확하다 — 이 파일은 잘 바뀌지 않는 정체성/규칙, 대시보드는 매일 바뀌는 상태.
 
-> **가지치기 기준**: 이 파일에 줄을 추가하기 전에 "이 줄을 지우면 AI가 실수할까?"로 판정한다. 코드를 보면 유추 가능한 내용, 자주 바뀌는 정보는 여기 두지 않는다 (Claude Code 공식 가이드 근거: [00-control-tower/external-reference-survey.md — 조사 1](00-control-tower/external-reference-survey.md#조사-1--anthropic-공식-하네스-기초)).
+> **가지치기 기준**: 이 파일에 줄을 추가하기 전에 "이 줄을 지우면 AI가 실수할까?"로 판정한다. 코드를 보면 유추 가능한 내용, 자주 바뀌는 정보는 여기 두지 않는다 (근거: [00-control-tower/external-reference-survey.md](00-control-tower/external-reference-survey.md#에이전트-하네스-공식-가이드라인)).
 >
-> **이 파일을 AI 도구가 자동으로 찾게 하려면**: Cursor/Copilot/Claude Code 등 여러 도구가 수렴한 업계 표준은 저장소 **루트**의 `AGENTS.md`(또는 `CLAUDE.md`가 `@AGENTS.md`를 import)다. 이 저장소를 실제 프로젝트에 적용했다면 루트에 얇은 `AGENTS.md`를 두고 이 파일(`docs/AGENTS.md`)로 링크하는 것을 권장한다 — 근거: [00-control-tower/external-reference-survey.md — 조사 2](00-control-tower/external-reference-survey.md#조사-2--경쟁-ai-코딩-에이전트의-프로젝트-컨텍스트-관례).
+> **이 파일을 AI 도구가 자동으로 찾게 하려면**: 업계 표준은 저장소 **루트**의 `AGENTS.md`(또는 `CLAUDE.md`가 `@AGENTS.md`를 import)다. 이 저장소를 실제 프로젝트에 적용했다면 루트에 얇은 `AGENTS.md`를 두고 이 파일(`docs/AGENTS.md`)로 링크하는 것을 권장한다 (근거: [00-control-tower/external-reference-survey.md](00-control-tower/external-reference-survey.md#ai-코딩-도구의-프로젝트-컨텍스트-관례)).
 
 ## 1. 프로젝트 정체성 (요약)
 

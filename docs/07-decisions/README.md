@@ -10,7 +10,7 @@
 | [01-architecture-decisions](01-architecture-decisions/README.md) | 시스템 구조/기술 스택/인프라 관련 결정 |
 | [02-progress-decisions](02-progress-decisions/README.md) | 일정/스코프/우선순위 관련 결정 |
 
-> **02-progress-decisions는 업계 표준 ADR의 정의(구조적으로 유의미한 기술 결정)를 벗어난 SuperDocs 고유 확장이다.** AWS/ThoughtWorks 등 업계 관행은 ADR을 아키텍처·기술 결정에 한정하고, 일정/스코프/우선순위는 별도 decision log로 다룬다 — 여기서는 형식(ADR 템플릿)만 차용했을 뿐 업계 컨센서스로 오인하지 않는다. 근거: [외부 레퍼런스 조사 — ADR 생태계](../00-control-tower/external-reference-survey.md#조사-4--adr-생태계).
+> **02-progress-decisions는 업계 표준 ADR의 정의(구조적으로 유의미한 기술 결정)를 벗어난 SuperDocs 고유 확장이다.** AWS/ThoughtWorks 등 업계 관행은 ADR을 아키텍처·기술 결정에 한정하고, 일정/스코프/우선순위는 별도 decision log로 다룬다 — 여기서는 형식(ADR 템플릿)만 차용했을 뿐 업계 컨센서스로 오인하지 않는다. 근거: [00-control-tower/external-reference-survey.md](../00-control-tower/external-reference-survey.md#결정-기록-표준).
 
 ## 작성 원칙 (ADR 공통)
 

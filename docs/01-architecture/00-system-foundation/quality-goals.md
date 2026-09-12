@@ -1,6 +1,6 @@
 # 품질 목표
 
-arc42 1장/10장이 요구하는 "이 시스템이 무엇을 최우선으로 하는가"를 명시한다. [tech-stack-and-conventions.md](tech-stack-and-conventions.md)가 "무엇으로 만드는가"라면, 이 문서는 "무엇을 위해 그렇게 만드는가"다. 근거: [00-control-tower/external-reference-survey.md — 조사 3](../../00-control-tower/external-reference-survey.md#조사-3--아키텍처-문서화-표준-arc42--c4--41).
+arc42 1장/10장이 요구하는 "이 시스템이 무엇을 최우선으로 하는가"를 명시한다. [tech-stack-and-conventions.md](tech-stack-and-conventions.md)가 "무엇으로 만드는가"라면, 이 문서는 "무엇을 위해 그렇게 만드는가"다. 근거: [00-control-tower/external-reference-survey.md](../../00-control-tower/external-reference-survey.md#아키텍처-문서화-표준).
 
 ## 우선순위 (Top 3~5, 순위 명시)
 

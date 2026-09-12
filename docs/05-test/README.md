@@ -18,7 +18,7 @@
 
 ## 자동화 비율 목표
 
-업계 관행(성숙한 팀 기준)을 참고한 기본값 — 프로젝트 성격에 따라 [mastery/00-initial-intake](../../mastery/00-initial-intake/README.md)에서 조정한다. 근거: [00-control-tower/external-reference-survey.md — 조사 7](../00-control-tower/external-reference-survey.md#조사-7--테스트검증-문서-표준).
+업계 관행(성숙한 팀 기준)을 참고한 기본값 — 프로젝트 성격에 따라 [mastery/00-initial-intake](../../mastery/00-initial-intake/README.md)에서 조정한다. 근거: [00-control-tower/external-reference-survey.md](../00-control-tower/external-reference-survey.md#테스트-및-검증-문서-표준).
 
 | 유형 | 목표 비율 |
 |---|---|

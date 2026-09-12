@@ -29,7 +29,7 @@
 
 ## 이 원칙의 외부 근거
 
-이 문서의 핵심 원칙(상태 문서는 덮어쓰기, 사실 기록은 append-only, 번호 폴더로 필요한 문서만 그때그때 로드)은 [외부 레퍼런스 조사](external-reference-survey.md#조사-9--ai-에이전트-컨텍스트-엔지니어링)에서 Anthropic의 공식 "context engineering" 원칙(최소·고신호 토큰 유지) 및 JIT(필요시 로드) 검색 패턴과 원리적으로 동일함이 확인됐다. 단, 같은 조사가 경고하는 "Compaction Cliff"(계층적 요약이 안전 제약을 유실시키는 현상)에 따라 다음 예외를 둔다:
+이 문서의 핵심 원칙(상태 문서는 덮어쓰기, 사실 기록은 append-only, 번호 폴더로 필요한 문서만 그때그때 로드)은 Anthropic의 공식 "context engineering" 원칙(최소·고신호 토큰 유지) 및 JIT(필요시 로드) 검색 패턴과 정합한다 (근거: [external-reference-survey.md](external-reference-survey.md#ai-에이전트-컨텍스트-관리-원칙)). 단, 계층적 요약이 안전 제약을 유실시킬 수 있다는 지적("Compaction Cliff")에 따라 다음 예외를 둔다:
 
 - [07-decisions](../07-decisions/README.md)의 ADR과 [05-test](../05-test/README.md)의 검증 통과 기준은 어떤 요약/승격 작업에서도 **요약 대상에서 제외**한다 — 원문을 그대로 두고, 상위 문서에는 링크만 남긴다.
 - [10-consulting/03-discussion-log](../10-consulting/03-discussion-log/README.md)를 결론만 남기고 승격 처리할 때도, 그 결론이 07-decisions ADR의 근거로 인용되는 부분은 원문을 삭제하지 않는다.
