@@ -1,46 +1,59 @@
 # 기술 스택 베이스라인 확정
 
-이 하네스의 기본값(TypeScript/Python, NestJS/FastAPI, PostgreSQL, Redis, AWS)을 이 프로젝트에 그대로 적용할지, 편차를 둘지 확정한다. 확정된 내용은 [docs/AGENTS.md](../../docs/AGENTS.md) 2절과 [docs/01-architecture/00-system-foundation/tech-stack-and-conventions.md](../../docs/01-architecture/00-system-foundation/tech-stack-and-conventions.md)에 반영한다.
+이 하네스는 특정 언어·프레임워크·클라우드를 전제하지 않는다. 아래 시나리오 중 이 프로젝트에 가까운 것을 고르거나, 맞는 것이 없으면 3절에 직접 기술한다. 확정된 내용은 [docs/AGENTS.md](../../docs/AGENTS.md) 2절과 [docs/01-architecture/00-system-foundation/tech-stack-and-conventions.md](../../docs/01-architecture/00-system-foundation/tech-stack-and-conventions.md)에 반영한다.
 
-## 1. 언어/프레임워크
+## 1. 시나리오 선택
 
-| 영역 | 하네스 기본값 | 이 프로젝트 확정값 | 편차 사유 |
-|---|---|---|---|
-| 백엔드 (도메인 A) | TypeScript / NestJS | | |
-| 백엔드 (도메인 B, 데이터/ML 등) | Python / FastAPI | | |
-| 프론트엔드 | TypeScript / Next.js | | |
-| 모바일 | (미정) | | |
+| 시나리오 | 특징 | 전형적 구성 방향 |
+|---|---|---|
+| A. 단일 서비스 웹앱 (MVP/소규모) | 팀 규모가 작고 빠른 반복이 우선 | 백엔드/프론트를 같은 언어로 통합, 모놀리식, 관계형 DB 하나 |
+| B. 도메인별 언어가 갈리는 서비스 | 일반 API와 데이터/ML 처리를 분리 운영 | 도메인별로 프레임워크 분리, 서비스 간 통신 계약 필요 |
+| C. 프론트엔드 중심/콘텐츠 서비스 | 트래픽 대부분이 화면 렌더링 | SSR/SSG 프레임워크 + 경량 BFF |
+| D. 데이터 파이프라인/배치 중심 | 실시간 요청보다 처리량이 우선 | 워커/큐 중심 구조, API는 부가적 |
+| E. 기존 코드베이스에 이 하네스를 적용 | 스택이 이미 확정되어 있음 | 기존 스택을 있는 그대로 3절에 기록 |
+| 해당 없음 | 위 어느 것과도 다름 | 3절에 자유 기술 |
 
-- NestJS와 FastAPI를 어떤 기준으로 도메인 분리할 것인가? (예: 일반 CRUD/트랜잭션 서비스는 NestJS, 데이터 처리/ML/비동기 워커는 FastAPI)
-- 두 서비스 간 통신 방식은? (REST / gRPC / 메시지 큐)
-- Next.js 렌더링 전략: SSR / SSG / ISR / CSR 중 화면별 기준
-- Next.js에서 NestJS/FastAPI API 호출 방식: Route Handler 경유 vs 클라이언트 직접 호출, 인증 토큰 전파 방식
+- 이 프로젝트에 해당하는 시나리오:
+- 해당 시나리오를 고른 이유(또는 "해당 없음"을 고른 이유):
 
-## 2. 데이터 계층
+## 2. 시나리오별로 확인할 질문 (해당 시나리오만 답한다)
 
-- PostgreSQL 버전 및 확장(extension) 사용 여부 (예: pgvector, PostGIS)
-- 스키마 관리 도구 (Prisma / TypeORM / Alembic 등)
-- Redis 용도 분리: 캐시 / 세션 / 큐(BullMQ, Celery) / 분산 락 — 각각 명시
-- 데이터 백업/복구 정책 초안
+- **B를 골랐다면**: 두 도메인을 어떤 기준으로 분리하는가? 서비스 간 통신 방식은(REST/gRPC/메시지 큐)?
+- **C를 골랐다면**: 렌더링 전략(SSR/SSG/ISR/CSR)을 화면별로 어떻게 나누는가? 프론트가 백엔드 API를 직접 호출하는가, BFF를 경유하는가?
+- **D를 골랐다면**: 큐/워커 기술은? 처리 실패 시 재시도·데드레터 정책은?
+- **E를 골랐다면**: 기존 스택의 버전과, 이 하네스 적용 과정에서 바꾸지 않을 것을 명확히 한다.
 
-## 3. 인프라 (AWS) — 완결성과 비용의 균형
+## 3. 확정 스택
 
-이 하네스는 AWS를 기본 전제로 하되, **완결성만 좇지 않고 비용 산정 기준을 항상 함께 명시**한다.
+| 영역 | 확정값 | 비고 |
+|---|---|---|
+| 백엔드 (도메인 A) | | |
+| 백엔드 (도메인 B, 있는 경우) | | |
+| 프론트엔드 | | |
+| 모바일 (해당하는 경우) | | |
+| DB | | 버전, 확장(extension) 사용 여부 |
+| 스키마 관리 도구 | | (ORM/마이그레이션 도구) |
+| 캐시/큐 | | 용도별로 분리 명시 (캐시 / 세션 / 큐 / 분산 락) |
+| 데이터 백업/복구 정책 | | |
 
-| 구성 요소 | 최저비용 시작 티어 (1인/저예산) | 표준 엔터프라이즈 티어 | 비용 관점 | 이 프로젝트 결정 |
+## 4. 인프라 — 완결성과 비용의 균형
+
+어느 클라우드/호스팅(AWS, GCP, Azure, Vercel+관리형 DB, 자체 호스팅 등)을 쓰든, 구성 요소별로 "최저비용으로 시작하는 티어"와 "표준 엔터프라이즈 티어" 중 어디쯤에서 출발할지 먼저 정하고, 그 근거를 비용 관점과 함께 남긴다.
+
+| 구성 요소 | 최저비용 시작 티어 (예시) | 표준 엔터프라이즈 티어 (예시) | 이 프로젝트 결정 | 비용 관점 |
 |---|---|---|---|---|
-| 컴퓨트 | Lightsail 단일 인스턴스 (~$10-40/월) 또는 EC2 t3.micro(프리티어) | ECS Fargate / EKS / Lambda | Fargate가 EKS보다 관리비용↓, Lambda는 트래픽 낮을 때 최저비용 | |
-| DB | RDS db.t4g.micro Single-AZ (~$15-25/월) | RDS Multi-AZ / Aurora | Aurora가 RDS 대비 비용↑, 초기엔 RDS 단일 AZ로 시작 검토 | |
-| 캐시 | 컴퓨트 인스턴스에 Redis 동거(별도 서비스 없이) | ElastiCache Redis (관리형, 장애복구) | 노드 크기/개수에 비례 | |
-| 스토리지 | S3 (표준 티어 그대로, 처음부터 저비용) | S3 + 스토리지 클래스 정책 | 사실상 무제한, 저비용 | |
-| 네트워크 | 공인 IP 인스턴스 직접 서비스 (ALB/NAT 없음) | VPC, ALB, CloudFront | 보안 격리, NAT Gateway 비용 주의 | |
-| 관측성 | 인스턴스 로그 파일 + 기본 CloudWatch 무료 티어 | CloudWatch, X-Ray | 장애 대응 속도↑, 로그 보존 기간에 비례해 비용 증가 | |
-| CI/CD | GitHub Actions (무료 티어) | GitHub Actions / CodePipeline | | |
+| 컴퓨트 | 단일 소형 인스턴스 | 관리형 컨테이너/서버리스 오케스트레이션 | | |
+| DB | 단일 인스턴스, 단일 가용영역 | 다중 가용영역/고가용성 구성 | | |
+| 캐시 | 컴퓨트 인스턴스에 동거 | 관리형 캐시 서비스 (장애복구 포함) | | |
+| 스토리지 | 오브젝트 스토리지 표준 티어 | 스토리지 클래스 정책 적용 | | |
+| 네트워크 | 공인 IP 직접 서비스 | 로드밸런서/CDN/사설망 구성 | | |
+| 관측성 | 인스턴스 로그 + 기본 무료 티어 모니터링 | 중앙화된 로그/트레이싱/알람 | | |
+| CI/CD | 무료 티어 CI | 전용 파이프라인 서비스 | | |
 
-- 이번 페이즈에서 **과설계를 피해야 할 영역**은 어디인가? (예: 초기에는 Aurora 대신 RDS 단일 인스턴스로 시작, ALB/NAT 없이 공인 IP로 직접 서비스)
+- 이번 페이즈에서 **과설계를 피해야 할 영역**은 어디인가?
 - 예상 월 인프라 예산 상한선은?
 - 비용 재검토 주기는? 기본값: **페이즈 종료마다 + 예상 예산 20% 초과 시 즉시** — [docs/01-architecture/00-system-foundation/environment-and-infra-baseline.md](../../docs/01-architecture/00-system-foundation/environment-and-infra-baseline.md) "비용 재검토 정책" 절과 [docs/06-history](../../docs/06-history/README.md)에 비용 변화 기록
 
-## 4. 편차 승인
+## 5. 편차/변경 기록
 
-편차가 있다면 사유와 함께 [docs/07-decisions/01-architecture-decisions](../../docs/07-decisions/01-architecture-decisions/README.md)에 ADR로 기록한다.
+착수 이후 스택을 바꾸게 되면 사유와 함께 [docs/07-decisions/01-architecture-decisions](../../docs/07-decisions/01-architecture-decisions/README.md)에 ADR로 기록한다.

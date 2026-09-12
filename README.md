@@ -27,9 +27,9 @@
 
 이 설계는 아래 외부 표준·공식 가이드와의 정합성을 검토해 근거를 보강했다: Anthropic의 공식 에이전트 하네스 가이드라인, 주요 AI 코딩 도구의 프로젝트 컨텍스트 관례, arc42·C4·4+1 아키텍처 표준, 결정 기록(ADR) 표준, 대규모 조직의 설계 합의 프로세스, 문서 분류 이론(Diátaxis), ISO 29119 테스트 표준, SRE 인시던트 대응 관행, AI 에이전트 컨텍스트 관리 원칙, 스펙 기반 개발 프레임워크. 검토 결과 기존 구조가 이들 표준과 대체로 정합함을 확인했으며, 확인된 구체적 격차는 관련 폴더에 반영했다. 전체 근거와 출처는 [docs/00-control-tower/external-reference-survey.md](docs/00-control-tower/external-reference-survey.md) 참조.
 
-## 기본 전제 기술 스택
+## 기술 스택은 고정하지 않는다
 
-TypeScript/Python, NestJS·FastAPI·Next.js, PostgreSQL·Redis, AWS. 상세와 편차 기록 방법은 [docs/README.md](docs/README.md)와 [mastery/00-initial-intake/02-tech-stack-baseline.md](mastery/00-initial-intake/02-tech-stack-baseline.md) 참조.
+이 하네스는 특정 언어·프레임워크·클라우드를 전제하지 않는다. 실제 스택은 프로젝트 착수 시 [mastery/00-initial-intake/02-tech-stack-baseline.md](mastery/00-initial-intake/02-tech-stack-baseline.md)에서 프로젝트의 시나리오(단일 서비스인지, 도메인별로 언어가 갈리는지, 데이터/배치 중심인지 등)에 맞는 선택지를 고르거나 직접 기술해 확정한다.
 
 ## 이 저장소를 실제 프로젝트에 쓰는 법
 

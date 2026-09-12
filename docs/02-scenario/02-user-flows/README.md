@@ -1,6 +1,6 @@
 # 02-user-flows — 사용자 흐름
 
-사용자 여정과 화면 단위 흐름을 담는다. [01-feature-scenarios](../01-feature-scenarios/README.md)가 기능 단위라면, 여기는 사용자 관점의 end-to-end 흐름이다. Next.js 화면 구성과 직접 연결된다.
+사용자 여정과 화면 단위 흐름을 담는다. [01-feature-scenarios](../01-feature-scenarios/README.md)가 기능 단위라면, 여기는 사용자 관점의 end-to-end 흐름이다. 프론트엔드 화면 구성과 직접 연결된다.
 
 **이 폴더는 "구현 여부와 무관하게, 이 서비스가 제공해야 할 흐름 전체 목록"이다.** 아직 코드로 없어도 여기 먼저 흐름을 등록한다 — 신규 기능 구상이나 제3자 관점 검토를 할 때, 구현된 것만 보고는 전체 그림을 볼 수 없기 때문이다. 구현되면 흐름 자체를 지우지 않고 상태만 갱신한다.
 
@@ -26,5 +26,5 @@
 ## 연결 지점
 
 - UI 검증: [05-test/04-ui-verification](../../05-test/04-ui-verification/README.md)
-- Next.js 라우트 매핑: [01-architecture/01-system-composition/module-composition-map.md](../../01-architecture/01-system-composition/module-composition-map.md)
+- 프론트엔드 라우트 매핑: [01-architecture/01-system-composition/module-composition-map.md](../../01-architecture/01-system-composition/module-composition-map.md)
 - 구현된 흐름의 실제 코드 위치: [04-code/01-business-logic](../../04-code/01-business-logic/README.md)

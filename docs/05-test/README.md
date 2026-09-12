@@ -8,9 +8,9 @@
 |---|---|---|
 | [00-static-verification](00-static-verification/README.md) | 정적 검증 | 린트, 타입체크, 정적분석 |
 | [01-unit-verification](01-unit-verification/README.md) | 단위 검증 | 함수/클래스 단위 |
-| [02-integration-verification](02-integration-verification/README.md) | 통합 검증 | 모듈 간, DB/Redis 연동 |
+| [02-integration-verification](02-integration-verification/README.md) | 통합 검증 | 모듈 간, DB/캐시 연동 |
 | [03-scenario-verification](03-scenario-verification/README.md) | 시나리오 검증 | [02-scenario](../02-scenario/README.md) 기반 E2E |
-| [04-ui-verification](04-ui-verification/README.md) | UI 검증 | Next.js 화면, 접근성, 반응형 |
+| [04-ui-verification](04-ui-verification/README.md) | UI 검증 | 프론트엔드 화면, 접근성, 반응형 |
 | [05-nonfunctional-verification](05-nonfunctional-verification/README.md) | 비기능 검증 | 성능, 보안, 가용성 |
 | [06-environment-verification](06-environment-verification/README.md) | 현장 환경 검증 | staging/production 실환경 |
 | [07-manual-verification-checklist](07-manual-verification-checklist/README.md) | 수동 검증 체크리스트 | 자동화 안 된 항목 |

@@ -49,14 +49,9 @@
 
 프로젝트 착수 전 1회만 하는 최초 인터뷰는 이 폴더가 아니라 저장소 루트의 [../mastery](../mastery/README.md)에 있다.
 
-## 기본 기술 스택 (이 하네스의 기본값)
+## 기술 스택
 
-이 하네스는 아래 스택을 기본 전제로 설계되어 있다. 프로젝트마다 [../mastery/00-initial-intake](../mastery/00-initial-intake/README.md)에서 실제 스택을 재확인하고 편차를 기록한다.
-
-- **언어**: TypeScript, Python
-- **프레임워크**: NestJS (백엔드/TS), FastAPI (백엔드/Python), Next.js (프론트엔드/TS)
-- **DB**: PostgreSQL (주 저장소), Redis (캐시/세션/큐)
-- **인프라**: AWS — 완결성(가용성, 관측성, 보안)을 우선하되 비용 산정 기준을 항상 함께 명시
+이 하네스는 특정 언어·프레임워크·클라우드를 전제하지 않는다. 프로젝트마다 [../mastery/00-initial-intake/02-tech-stack-baseline.md](../mastery/00-initial-intake/02-tech-stack-baseline.md)에서 시나리오에 맞는 스택을 확정하고, 그 결과를 [01-architecture/00-system-foundation](01-architecture/00-system-foundation/README.md)에 반영한다. 완결성(가용성, 관측성, 보안)과 비용 산정 기준을 항상 함께 명시하는 원칙은 스택과 무관하게 적용한다.
 
 ## 문서를 읽는 순서 (신규 참여자 / 새 AI 세션 기준)
 

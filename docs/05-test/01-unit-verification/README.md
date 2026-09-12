@@ -6,9 +6,9 @@
 
 | 대상 | 도구 |
 |---|---|
-| NestJS | Jest |
-| FastAPI | pytest |
-| Next.js | Jest / Vitest + React Testing Library |
+| 백엔드 (도메인 A) | (확정 필요) |
+| 백엔드 (도메인 B, 있는 경우) | (확정 필요) |
+| 프론트엔드 | (확정 필요) |
 
 ## 커버리지 기준
 

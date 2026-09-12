@@ -1,13 +1,13 @@
 # 02-integration-verification — 통합 검증
 
-모듈 간, 실제 PostgreSQL/Redis와의 연동을 포함한 검증. NestJS ↔ FastAPI 간 통신 검증도 포함한다.
+모듈 간, 실제 DB/캐시와의 연동을 포함한 검증. 백엔드 서비스 간 통신 검증도 포함한다.
 
 ## 검증 범위
 
 | 범위 | 방법 |
 |---|---|
 | DB 연동 | 테스트 전용 DB 컨테이너 (Docker) |
-| Redis 연동 | 테스트 전용 Redis 컨테이너 |
+| 캐시 연동 | 테스트 전용 캐시 컨테이너 |
 | 서비스 간 API 호출 | 계약 기반 테스트 ([04-code/02-api-contracts](../../04-code/02-api-contracts/README.md) 기준) |
 
 ## 작성 원칙

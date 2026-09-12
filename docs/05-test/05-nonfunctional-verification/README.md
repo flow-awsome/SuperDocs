@@ -27,6 +27,6 @@
 
 레벨(L1/L2/L3)은 프로젝트 리스크에 맞게 [mastery/00-initial-intake/04-success-criteria-and-constraints.md](../../../mastery/00-initial-intake/04-success-criteria-and-constraints.md)에서 확정하고 [07-decisions](../../07-decisions/README.md)에 ADR로 남긴다. 위 챕터 번호는 ASVS 버전에 따라 세부 절이 바뀔 수 있으니 적용 시 원문 대조 필수.
 
-## AWS 인프라 관점 검증
+## 클라우드 인프라 관점 검증
 
 [01-architecture/00-system-foundation/environment-and-infra-baseline.md](../../01-architecture/00-system-foundation/environment-and-infra-baseline.md)에 정의된 구성이 실제 부하를 견디는지 확인한다. 비용 대비 과설계/과소설계 여부도 함께 판단한다.

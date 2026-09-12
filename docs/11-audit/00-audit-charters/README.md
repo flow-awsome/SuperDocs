@@ -10,7 +10,7 @@
 |---|---|---|---|
 | 1 | 아키텍처 정합성 | 설계([01-architecture](../../01-architecture/README.md))와 실제 구현이 일치하는가 | |
 | 2 | 보안 | 인증/인가, 데이터 보호, 입력 검증 취약점 | [05-test/05-nonfunctional-verification](../../05-test/05-nonfunctional-verification/README.md) |
-| 3 | 인프라/비용 준비도 | AWS 구성이 실제 트래픽/예산에 맞는가, 과설계/과소설계 여부 | [01-architecture/00-system-foundation/environment-and-infra-baseline.md](../../01-architecture/00-system-foundation/environment-and-infra-baseline.md) |
+| 3 | 인프라/비용 준비도 | 인프라 구성이 실제 트래픽/예산에 맞는가, 과설계/과소설계 여부 | [01-architecture/00-system-foundation/environment-and-infra-baseline.md](../../01-architecture/00-system-foundation/environment-and-infra-baseline.md) |
 | 4 | 테스트 무결성 | 테스트가 실제로 의미 있는 것을 검증하는가 (모킹 남용, 그린이지만 공허한 테스트) | [05-test](../../05-test/README.md) |
 | 5 | 문서-코드 정합성 | 문서가 설명하는 것과 코드가 실제로 하는 것이 일치하는가 | [04-code](../../04-code/README.md) |
 | 6 | 비즈니스 로직 전수 | 도메인 규칙이 시나리오대로 전부 구현/처리되는가, 누락된 예외 케이스 | [02-scenario/01-feature-scenarios](../../02-scenario/01-feature-scenarios/README.md) |

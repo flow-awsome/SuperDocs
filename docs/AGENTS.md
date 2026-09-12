@@ -15,18 +15,18 @@
 - **핵심 성공 기준**: (미작성)
 - **현재 페이즈**: (미작성) → [03-plan/00-phases](03-plan/00-phases/README.md) 참조
 
-## 2. 기술 스택 기본값
+## 2. 기술 스택 (이 프로젝트 확정값)
 
-상세는 [../mastery/00-initial-intake/02-tech-stack-baseline.md](../mastery/00-initial-intake/02-tech-stack-baseline.md) 참조. 이 프로젝트의 기본 전제:
+[../mastery/00-initial-intake/02-tech-stack-baseline.md](../mastery/00-initial-intake/02-tech-stack-baseline.md)에서 시나리오에 맞게 확정한 내용을 채운다 — 이 하네스는 특정 언어·프레임워크를 전제하지 않는다.
 
-| 영역 | 기본값 | 비고 |
+| 영역 | 확정값 | 비고 |
 |---|---|---|
-| 언어 | TypeScript, Python | 서비스 특성에 따라 팀별로 분리 배정 가능 |
-| 백엔드 프레임워크 | NestJS (TS), FastAPI (Python) | 모듈 경계는 [01-architecture/01-system-composition](01-architecture/01-system-composition/README.md) 참조 |
-| 프론트엔드 프레임워크 | Next.js (TS) | App Router 기준, 백엔드 API는 NestJS/FastAPI 경유 |
-| DB | PostgreSQL | 스키마 변경은 반드시 [06-history/00-business-logic-changelog](06-history/00-business-logic-changelog/README.md)에 기록 |
-| 캐시/큐 | Redis | 세션, 캐시, 비동기 큐 용도 분리 명시 |
-| 인프라 | AWS | 완결성과 비용 산정을 항상 함께 검토 — [../mastery/00-initial-intake/02-tech-stack-baseline.md](../mastery/00-initial-intake/02-tech-stack-baseline.md)의 비용 섹션 참조 |
+| 언어 | (미작성) | 서비스 특성에 따라 영역별로 분리 배정 가능 |
+| 백엔드 프레임워크 | (미작성) | 모듈 경계는 [01-architecture/01-system-composition](01-architecture/01-system-composition/README.md) 참조 |
+| 프론트엔드 프레임워크 | (미작성) | 백엔드 API 호출 방식 확정 |
+| DB | (미작성) | 스키마 변경은 반드시 [06-history/00-business-logic-changelog](06-history/00-business-logic-changelog/README.md)에 기록 |
+| 캐시/큐 | (미작성) | 세션, 캐시, 비동기 큐 용도 분리 명시 |
+| 인프라 | (미작성) | 완결성과 비용 산정을 항상 함께 검토 — [../mastery/00-initial-intake/02-tech-stack-baseline.md](../mastery/00-initial-intake/02-tech-stack-baseline.md)의 비용 섹션 참조 |
 | CI/CD | (프로젝트별 확정 필요) | 유지보수 지속가능성 관점에서 설계 |
 
 ## 3. 에이전트 운영 규칙 (핵심)
@@ -69,9 +69,9 @@
 |---|---|
 | 아키텍처 | 01-architecture |
 | 프로덕트/기획 | 10-consulting, 02-scenario |
-| 백엔드 (TS) | 04-code (NestJS 모듈), 03-plan |
-| 백엔드 (Python) | 04-code (FastAPI 모듈), 03-plan |
-| 프론트엔드 (Next.js) | 04-code (Next.js 모듈), 02-scenario/02-user-flows, 05-test/04-ui-verification |
+| 백엔드 (도메인 A) | 04-code (해당 모듈), 03-plan |
+| 백엔드 (도메인 B, 있는 경우) | 04-code (해당 모듈), 03-plan |
+| 프론트엔드 | 04-code (해당 모듈), 02-scenario/02-user-flows, 05-test/04-ui-verification |
 | QA/검증 | 05-test |
 | 인프라/SRE | 01-architecture/00-system-foundation, 08-troubleshooting |
 | 데이터/DB | 04-code, 06-history/00-business-logic-changelog |

@@ -4,8 +4,8 @@
 
 ## 도구
 
-- E2E: Playwright / Cypress (Next.js 포함 전체 흐름)
-- API E2E: supertest 등
+- E2E: (도구 확정 필요) — 프론트엔드 포함 전체 흐름
+- API E2E: (도구 확정 필요)
 
 ## 작성 원칙
 

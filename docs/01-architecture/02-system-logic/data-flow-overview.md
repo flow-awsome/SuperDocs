@@ -5,15 +5,15 @@
 ```mermaid
 sequenceDiagram
   Client->>API Gateway: 요청
-  API Gateway->>NestJS Service: 라우팅
-  NestJS Service->>PostgreSQL: 조회/쓰기
-  NestJS Service->>Redis: 캐시 확인
-  NestJS Service-->>Client: 응답
+  API Gateway->>Backend Service: 라우팅
+  Backend Service->>DB: 조회/쓰기
+  Backend Service->>Cache: 캐시 확인
+  Backend Service-->>Client: 응답
 ```
 
 ## 비동기/이벤트 흐름 (해당하는 경우)
 
-- 이벤트 발행자 → 큐(Redis/SQS) → 소비자 → 처리 결과
+- 이벤트 발행자 → 큐 → 소비자 → 처리 결과
 
 ## 캐시 전략
 

@@ -6,7 +6,7 @@
 
 | 폴더 | 내용 |
 |---|---|
-| [00-module-map](00-module-map/README.md) | 실제 코드 저장소의 디렉토리/모듈 지도 (NestJS/FastAPI/Next.js) |
+| [00-module-map](00-module-map/README.md) | 실제 코드 저장소의 디렉토리/모듈 지도 |
 | [01-business-logic](01-business-logic/README.md) | 시나리오별 비즈니스 로직이 어느 파일/함수에 구현되어 있는지 |
 | [02-api-contracts](02-api-contracts/README.md) | 서비스 간, 프론트-백엔드 간 API 계약 |
 

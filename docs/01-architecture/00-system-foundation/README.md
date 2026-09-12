@@ -5,7 +5,7 @@
 ## 파일
 
 - [tech-stack-and-conventions.md](tech-stack-and-conventions.md) — 확정된 스택, 버전, 코딩/네이밍 컨벤션
-- [environment-and-infra-baseline.md](environment-and-infra-baseline.md) — 로컬/스테이징/프로덕션 환경 구성, AWS 인프라 베이스라인
+- [environment-and-infra-baseline.md](environment-and-infra-baseline.md) — 로컬/스테이징/프로덕션 환경 구성, 클라우드 인프라 베이스라인
 - [quality-goals.md](quality-goals.md) — 이 시스템이 최우선으로 하는 품질 속성 (arc42 품질목표 대응)
 
 ## 갱신 시점

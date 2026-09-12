@@ -6,9 +6,9 @@
 
 | 대상 | 도구 | 통과 기준 |
 |---|---|---|
-| TypeScript (NestJS/Next.js) | ESLint, tsc --noEmit | 에러 0건 |
-| Python (FastAPI) | Ruff, mypy/pyright | 에러 0건 |
-| 의존성 취약점 | npm audit / pip-audit | High 이상 0건 |
+| 백엔드 언어/프레임워크 | (린터, 타입체커 확정) | 에러 0건 |
+| 프론트엔드 언어/프레임워크 | (린터, 타입체커 확정) | 에러 0건 |
+| 의존성 취약점 | (패키지 매니저별 감사 도구) | High 이상 0건 |
 
 ## CI 연동
 

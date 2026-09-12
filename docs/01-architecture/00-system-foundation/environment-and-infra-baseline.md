@@ -4,22 +4,23 @@
 
 | 환경 | 목적 | 인프라 규모 | 접근 권한 |
 |---|---|---|---|
-| local | 개발자 로컬 | Docker Compose (Postgres, Redis) | 개발자 전원 |
+| local | 개발자 로컬 | 컨테이너 기반 로컬 스택 (DB, 캐시 등) | 개발자 전원 |
 | staging | 통합 검증 | 프로덕션 축소판 | 개발팀 + QA |
 | production | 실서비스 | [mastery/00-initial-intake/02-tech-stack-baseline.md](../../../mastery/00-initial-intake/02-tech-stack-baseline.md) 확정 규모 | 최소 권한 원칙 |
 
-## 2. AWS 인프라 베이스라인
+## 2. 클라우드 인프라 베이스라인
 
-> 완결성과 비용 산정을 함께 고려한 최종 구성. 초기 산정 근거는 [mastery/00-initial-intake/02-tech-stack-baseline.md](../../../mastery/00-initial-intake/02-tech-stack-baseline.md) 3절 참조.
+> 완결성과 비용 산정을 함께 고려한 최종 구성. 초기 산정 근거는 [mastery/00-initial-intake/02-tech-stack-baseline.md](../../../mastery/00-initial-intake/02-tech-stack-baseline.md) 4절 참조. 아래 항목은 클라우드/호스팅 선택(AWS/GCP/Azure/자체 호스팅 등)과 무관하게 채워야 하는 공통 골격이다.
 
-- 리전:
-- VPC/서브넷 구조:
-- 컴퓨트: (ECS Fargate / EKS / Lambda 중 확정)
-- DB: RDS PostgreSQL — 인스턴스 클래스, Multi-AZ 여부
-- 캐시: ElastiCache Redis — 노드 타입/개수
-- 로드밸런싱/CDN: ALB, CloudFront
-- 시크릿 관리: AWS Secrets Manager / Parameter Store
-- 관측성: CloudWatch 대시보드, 알람 임계치 → [05-test/06-environment-verification](../../05-test/06-environment-verification/README.md)와 연동
+- 사용 클라우드/호스팅:
+- 리전/가용영역:
+- 네트워크 구조(VPC/서브넷 등):
+- 컴퓨트: (선택한 provider의 컨테이너/서버리스/VM 서비스와 확정 구성)
+- DB: 인스턴스 클래스, 다중 가용영역 여부
+- 캐시: 노드 타입/개수
+- 로드밸런싱/CDN:
+- 시크릿 관리:
+- 관측성: 대시보드, 알람 임계치 → [05-test/06-environment-verification](../../05-test/06-environment-verification/README.md)와 연동
 
 ## 3. 월간 예상 비용 추정
 
