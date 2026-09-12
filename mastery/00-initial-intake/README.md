@@ -8,6 +8,7 @@
 2. [02-tech-stack-baseline.md](02-tech-stack-baseline.md) — 기술 스택 확정 및 편차 기록
 3. [03-stakeholder-and-scope.md](03-stakeholder-and-scope.md) — 이해관계자, 의사결정 권한, 범위 경계
 4. [04-success-criteria-and-constraints.md](04-success-criteria-and-constraints.md) — 성공 기준, 제약조건(예산/기한/컴플라이언스)
+5. [05-related-projects.md](05-related-projects.md) — 다른 저장소와 함께 개발되는 멀티레포 구성인지, 있다면 관련 저장소 등록
 
 ## 사용 방법
 

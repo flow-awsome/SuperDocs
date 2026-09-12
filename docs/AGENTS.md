@@ -44,6 +44,7 @@
    - 사용자가 해야 할 일 / 사용자에게 물어볼 일 → [09-todo](09-todo/README.md)
    - 지속적인 방향 논의/질의응답 → [10-consulting](10-consulting/README.md)
    - 정기 전수조사/교차검증 결과 → [11-audit](11-audit/README.md)
+   - 다른 Git 저장소와의 경계 작업(멀티레포) → [01-architecture/01-system-composition/related-repositories.md](01-architecture/01-system-composition/related-repositories.md) (있는 프로젝트만)
 3. **불확실하면 추측해서 진행하지 않고 [10-consulting](10-consulting/README.md)에 질문을 남기거나 사용자에게 직접 확인한다.** 특히 비즈니스 로직의 의도가 애매할 때. 확인이 필요한 항목이 쌓이면 [00-control-tower/open-questions.md](00-control-tower/open-questions.md)에도 등록한다.
 4. **진행 중 의미없는 중간보고를 하지 않는다.** 결과와 다음 행동만 전달한다. 상세 근거가 필요하면 문서에 기록하고 링크로 대체한다.
 5. **토큰 최적화 스킬 사용 정책**은 [skill-usage-policy.md](01-architecture/04-system-instructions/skill-usage-policy.md) 참조 (caveman류 압축 모드, 탐색 전용 에이전트 등을 언제 쓰는지).

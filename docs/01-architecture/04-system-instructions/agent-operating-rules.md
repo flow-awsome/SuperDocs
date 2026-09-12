@@ -21,6 +21,7 @@
 | 문제를 겪고 해결했다 | [08-troubleshooting](../../08-troubleshooting/README.md) |
 | 사용자가 해야 할 일이 생겼다 | [09-todo/00-manual-setup-tasks](../../09-todo/00-manual-setup-tasks/README.md) |
 | 검증을 수행했다 | [05-test](../../05-test/README.md) |
+| 다른 Git 저장소와의 경계에 걸친 작업이다 (공유 계약 변경, 인증 방식 변경 등) | [01-architecture/01-system-composition/related-repositories.md](../01-system-composition/related-repositories.md) (해당 파일이 있는 프로젝트만) |
 
 ## 4. 보고 원칙 (토큰 최적화)
 
@@ -52,6 +53,15 @@
 이 등급표는 예시다 — 실제 임계값은 [mastery/00-initial-intake/04-success-criteria-and-constraints.md](../../../mastery/00-initial-intake/04-success-criteria-and-constraints.md)의 리스크 허용도에 맞게 [07-decisions](../../07-decisions/README.md)에 프로젝트별로 확정한다.
 
 Lv6 이상 결정은 [07-decisions](../../07-decisions/README.md)의 ADR에도 위험도(Lv) 필드를 남겨, 나중에 "이 등급의 결정이 실제로 전부 ADR로 기록됐는지" 역추적할 수 있게 한다.
+
+## 8. 관련 저장소(멀티레포) 조사 원칙
+
+[01-architecture/01-system-composition/related-repositories.md](../01-system-composition/related-repositories.md)가 존재하는 프로젝트에만 적용된다.
+
+- **평소에는 다른 저장소를 조회하지 않는다.** 경계에 걸친 작업(공유 계약 변경, 인증 방식 변경, 다른 저장소가 소비하는 인터페이스 추가/제거)이 실제로 생겼을 때만 레지스트리에서 해당 저장소를 찾아 "조사 시 우선 참조 문서" 링크만 확인한다 — 매 세션 선제적으로 관련 저장소를 전부 읽는 것은 이 하네스의 토큰 최적화 원칙에 위배된다.
+- **접근 방법에 따라 조사 수단을 고른다**: public 저장소는 `WebFetch`로 raw 파일을 직접 읽고, 같은 조직의 private 저장소는 `gh api`로 조회하며, 접근 불가한 저장소는 추측하지 않고 사용자에게 현재 값을 확인하거나 [00-control-tower/open-questions.md](../../00-control-tower/open-questions.md)에 등록한다.
+- **이 저장소의 결정이 다른 저장소에 영향을 준다면**, ADR 작성만으로는 전파되지 않는다 — `related-repositories.md`의 "최근 결정" 표에도 반드시 한 줄을 추가한다.
+- **다른 저장소의 최근 결정이 이 저장소에 영향을 준 것을 확인했다면**, 대응 조치를 이 저장소의 [06-history](../../06-history/README.md)에 남기고 출처(다른 저장소의 ADR 링크)를 명시한다.
 
 ### 응답 가능한 인간이 없을 때의 기본 동작
 

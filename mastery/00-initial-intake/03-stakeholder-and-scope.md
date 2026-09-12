@@ -20,7 +20,7 @@
 
 ## 3. 범위 경계 (Scope Boundary)
 
-- 이 프로젝트가 다른 시스템/팀과 맞닿는 지점은 어디인가? (외부 API, 다른 서비스와의 계약)
+- 이 프로젝트가 다른 시스템/팀과 맞닿는 지점은 어디인가? (외부 API, 다른 서비스와의 계약) — 그 상대가 **별도 Git 저장소**라면 여기서 개략만 적고 [05-related-projects.md](05-related-projects.md)에서 저장소 단위로 구체화한다.
 - 이 하네스가 관리하는 범위와 관리하지 않는 범위 (예: 디자인 시스템은 별도 저장소에서 관리)
 
 이 문서의 결론은 [docs/01-architecture/03-system-definition/non-goals-and-boundaries.md](../../docs/01-architecture/03-system-definition/non-goals-and-boundaries.md)에도 반영한다.

@@ -7,7 +7,7 @@
 | 폴더 | 변경 방식 | 크기/개수 예산 | 오너 | 검토 주기 |
 |---|---|---|---|---|
 | [00-control-tower](README.md) | project-dashboard/open-questions는 **덮어쓰기 전용**, governance-policy는 정책 변경 시만, external-reference-survey는 재조사 시에만 덮어쓰기 | dashboard ≤150줄, open-questions ≤20건 | PMO | 매 페이즈 |
-| [01-architecture](../01-architecture/README.md) | **현재 상태로 덮어쓰기** (로그 아님). quality-goals.md는 우선순위 자체가 바뀔 때만 | 문서당 ≤300줄, 넘으면 하위 분할 | 아키텍처 리드 | 6~12개월 또는 구조 변경 시 |
+| [01-architecture](../01-architecture/README.md) | **현재 상태로 덮어쓰기** (로그 아님). quality-goals.md는 우선순위 자체가 바뀔 때만. related-repositories.md(있는 경우)의 "최근 결정" 표는 project-dashboard와 동일하게 최대 5개 유지 | 문서당 ≤300줄, 넘으면 하위 분할 | 아키텍처 리드 | 6~12개월 또는 구조 변경 시, related-repositories.md는 관련 저장소 변경 시 즉시 |
 | [02-scenario](../02-scenario/README.md) | 현재 상태로 덮어쓰기, 상태 필드(초안/확정/구현완료)로 이력 표시 | 기능당 1파일 | 프로덕트 리드 | 매 페이즈 |
 | [03-plan](../03-plan/README.md) | phases/steps는 덮어쓰기(계획), step-logs는 append-only | step-log 파일당 ≤200줄 | PMO | 매 스텝 |
 | [04-code](../04-code/README.md) | 현재 상태로 덮어쓰기 (코드가 진실, 문서는 지도) | | 각 모듈 오너 | 리팩터링 시마다 |

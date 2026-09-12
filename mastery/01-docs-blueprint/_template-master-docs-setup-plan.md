@@ -35,6 +35,7 @@
 | 10-consulting | 항상 사용 | |
 | 11-audit | 항상 사용 (렌즈 수는 아래 4절) | |
 | 12-customers (선택) | 사용 / 미사용 | 멀티고객사 여부에 따름 |
+| 01-architecture/01-system-composition/related-repositories.md (선택) | 사용 / 미사용 | [00-initial-intake/05-related-projects.md](../00-initial-intake/05-related-projects.md)에서 멀티레포로 확인된 경우 |
 
 ## 4. 감사 체계 설정
 
@@ -79,4 +80,5 @@
 - [ ] `docs/02-scenario/00-service-overview/service-overview.md` 채우기
 - [ ] `docs/03-plan/00-phases/`에 첫 페이즈 등록
 - [ ] (선택) `docs/12-customers/` 모듈 생성
+- [ ] (멀티레포인 경우) `docs/01-architecture/01-system-composition/related-repositories.md` 생성 및 관련 저장소 등록
 - [ ] 팀에 "이제부터 `docs/`가 기준"이라고 공지

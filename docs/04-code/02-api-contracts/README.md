@@ -15,4 +15,4 @@
 계약이 하위 호환을 깨는 방식으로 바뀌면:
 1. [07-decisions/01-architecture-decisions](../../07-decisions/01-architecture-decisions/README.md)에 근거 기록
 2. [06-history/00-business-logic-changelog](../../06-history/00-business-logic-changelog/README.md)에 변경 이력 기록
-3. 영향받는 소비자 서비스 팀에게 [09-todo/01-dev-communication-log](../../09-todo/01-dev-communication-log/README.md)로 통지
+3. 영향받는 소비자가 **같은 저장소 안의 다른 모듈**이면 [09-todo/01-dev-communication-log](../../09-todo/01-dev-communication-log/README.md)로 통지, **다른 Git 저장소**면 [01-architecture/01-system-composition/related-repositories.md](../../01-architecture/01-system-composition/related-repositories.md)의 "최근 결정" 표에 등록해 통지한다.
