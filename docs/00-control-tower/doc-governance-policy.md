@@ -6,8 +6,8 @@
 
 | 폴더 | 변경 방식 | 크기/개수 예산 | 오너 | 검토 주기 |
 |---|---|---|---|---|
-| [00-control-tower](README.md) | project-dashboard/open-questions는 **덮어쓰기 전용**, governance-policy는 정책 변경 시만 | dashboard ≤150줄, open-questions ≤20건 | PMO | 매 페이즈 |
-| [01-architecture](../01-architecture/README.md) | **현재 상태로 덮어쓰기** (로그 아님) | 문서당 ≤300줄, 넘으면 하위 분할 | 아키텍처 리드 | 6~12개월 또는 구조 변경 시 |
+| [00-control-tower](README.md) | project-dashboard/open-questions는 **덮어쓰기 전용**, governance-policy는 정책 변경 시만, external-reference-survey는 재조사 시에만 덮어쓰기 | dashboard ≤150줄, open-questions ≤20건 | PMO | 매 페이즈 |
+| [01-architecture](../01-architecture/README.md) | **현재 상태로 덮어쓰기** (로그 아님). quality-goals.md는 우선순위 자체가 바뀔 때만 | 문서당 ≤300줄, 넘으면 하위 분할 | 아키텍처 리드 | 6~12개월 또는 구조 변경 시 |
 | [02-scenario](../02-scenario/README.md) | 현재 상태로 덮어쓰기, 상태 필드(초안/확정/구현완료)로 이력 표시 | 기능당 1파일 | 프로덕트 리드 | 매 페이즈 |
 | [03-plan](../03-plan/README.md) | phases/steps는 덮어쓰기(계획), step-logs는 append-only | step-log 파일당 ≤200줄 | PMO | 매 스텝 |
 | [04-code](../04-code/README.md) | 현재 상태로 덮어쓰기 (코드가 진실, 문서는 지도) | | 각 모듈 오너 | 리팩터링 시마다 |
@@ -26,6 +26,13 @@
 - 검증 기준 문서: 문서당 ≤300줄 (01-architecture와 동일 기준)
 - [07-manual-verification-checklist](../05-test/07-manual-verification-checklist/README.md)의 체크리스트 파일: 파일당 ≤100줄, 넘으면 배포 전/페이즈 종료 등 시점별로 분할
 - [08-verification-setup](../05-test/08-verification-setup/README.md): 목차만 있고 실행 커맨드가 비어있는 상태를 "완료"로 간주하지 않는다 — 최소 1회는 실제로 그 커맨드를 실행해 확인한 내용이어야 한다
+
+## 이 원칙의 외부 근거
+
+이 문서의 핵심 원칙(상태 문서는 덮어쓰기, 사실 기록은 append-only, 번호 폴더로 필요한 문서만 그때그때 로드)은 [외부 레퍼런스 조사](external-reference-survey.md#조사-9--ai-에이전트-컨텍스트-엔지니어링)에서 Anthropic의 공식 "context engineering" 원칙(최소·고신호 토큰 유지) 및 JIT(필요시 로드) 검색 패턴과 원리적으로 동일함이 확인됐다. 단, 같은 조사가 경고하는 "Compaction Cliff"(계층적 요약이 안전 제약을 유실시키는 현상)에 따라 다음 예외를 둔다:
+
+- [07-decisions](../07-decisions/README.md)의 ADR과 [05-test](../05-test/README.md)의 검증 통과 기준은 어떤 요약/승격 작업에서도 **요약 대상에서 제외**한다 — 원문을 그대로 두고, 상위 문서에는 링크만 남긴다.
+- [10-consulting/03-discussion-log](../10-consulting/03-discussion-log/README.md)를 결론만 남기고 승격 처리할 때도, 그 결론이 07-decisions ADR의 근거로 인용되는 부분은 원문을 삭제하지 않는다.
 
 ## 크기·개수 예산을 지키는 방법
 

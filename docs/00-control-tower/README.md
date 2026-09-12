@@ -13,10 +13,11 @@
 | [project-dashboard.md](project-dashboard.md) | 현재 페이즈, 건강도, 막힌 것, 다음 행동 — 압축 요약 | **덮어쓰기 전용.** 절대 append 금지 |
 | [doc-governance-policy.md](doc-governance-policy.md) | 폴더별 문서 관리 규칙 (append-only/덮어쓰기/보관 정책, 크기 예산, 검토 주기, 오너십) | 정책 자체가 바뀔 때만 갱신 (드묾) |
 | [open-questions.md](open-questions.md) | 사용자 결정을 기다리는 미해결 질문 목록 | 짧게 유지 — 해결되면 즉시 제거하고 답은 [07-decisions](../07-decisions/README.md) 또는 [10-consulting](../10-consulting/README.md)로 이동 |
+| [external-reference-survey.md](external-reference-survey.md) | 이 하네스 설계 근거를 뒷받침하는 외부 레퍼런스 조사(업계 표준, 공식 가이드, 경쟁 프로젝트) 원문 요약 | 재조사할 때만 덮어쓰기 (예외적으로 원본 자료 — 규칙 1의 "요약/링크만" 대상이 아님) |
 
 ## 핵심 규칙 (예외 없음)
 
-1. **이 폴더는 새로운 사실을 만들지 않는다.** 모든 내용은 [02-scenario](../02-scenario/README.md), [03-plan](../03-plan/README.md), [06-history](../06-history/README.md), [07-decisions](../07-decisions/README.md), [11-audit](../11-audit/README.md) 등 원본 문서의 요약/링크일 뿐이다. 원본과 이 폴더가 어긋나면 원본이 항상 맞다.
+1. **이 폴더는 새로운 사실을 만들지 않는다** (단, [external-reference-survey.md](external-reference-survey.md)는 외부 조사 원본이므로 예외). 그 외 모든 내용은 [02-scenario](../02-scenario/README.md), [03-plan](../03-plan/README.md), [06-history](../06-history/README.md), [07-decisions](../07-decisions/README.md), [11-audit](../11-audit/README.md) 등 원본 문서의 요약/링크일 뿐이다. 원본과 이 폴더가 어긋나면 원본이 항상 맞다.
 2. **`project-dashboard.md`는 크기 예산을 넘지 않는다** (권장: 150줄 이하). 예산을 넘기게 되는 갱신이라면, 오래된 항목을 지우지 말고 [06-history](../06-history/README.md) 또는 [11-audit/02-audit-closure-log](../11-audit/02-audit-closure-log/README.md)로 옮긴 뒤 대시보드에는 링크 한 줄만 남긴다.
 3. **의미 없는 중간보고를 남기지 않는다.** "오늘 무엇을 확인했다" 같은 서술이 아니라 "지금 상태가 무엇인가"만 남긴다.
 4. 이 원칙 자체를 어겼는지 판단이 애매하면 [doc-governance-policy.md](doc-governance-policy.md)의 폴더별 규칙표를 먼저 확인한다.

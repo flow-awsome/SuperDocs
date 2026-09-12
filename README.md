@@ -25,6 +25,8 @@
 
 이 조사 결과에 따라, 유효성이 확인된 패턴은 [docs/11-audit](docs/11-audit/README.md)의 교차검증 감사와 [docs/03-plan](docs/03-plan/README.md)의 위험도 게이트로 구조화했고, 비용을 키우는 것으로 확인된 패턴은 [docs/00-control-tower](docs/00-control-tower/README.md)의 명시적 규칙(덮어쓰기 vs append-only 구분, 크기 예산, 스냅샷 금지)으로 원천 차단하도록 설계했다. 이 하네스를 그대로 적용하면 별도 시행착오 없이 조사로 검증된 구조를 바로 확보할 수 있다.
 
+**단일 사례만으로는 근거가 얕다는 판단 아래, 10개 각도로 외부 레퍼런스를 추가 조사했다** — Anthropic 공식 하네스 가이드, 경쟁 AI 코딩 에이전트(Cursor/Aider/Windsurf/Devin/Copilot)의 컨텍스트 관례, arc42/C4/4+1 아키텍처 표준, ADR 생태계, Amazon/Google/Rust/Kubernetes/Python의 설계합의 문화, Diátaxis 문서 이론, ISO 29119 테스트 표준, Google SRE 포스트모템 문화, AI 에이전트 컨텍스트 엔지니어링 연구, 경쟁 스펙 기반 스캐폴딩(spec-kit, BMAD-METHOD)까지. 결과 다수가 기존 설계를 업계 표준과 이미 일치한다고 확인해줬고, 발견된 격차는 각 폴더에 반영했다. 전체 조사 결과와 출처는 [docs/00-control-tower/external-reference-survey.md](docs/00-control-tower/external-reference-survey.md) 참조.
+
 ## 기본 전제 기술 스택
 
 TypeScript/Python, NestJS·FastAPI·Next.js, PostgreSQL·Redis, AWS. 상세와 편차 기록 방법은 [docs/README.md](docs/README.md)와 [mastery/00-initial-intake/02-tech-stack-baseline.md](mastery/00-initial-intake/02-tech-stack-baseline.md) 참조.
@@ -37,6 +39,7 @@ TypeScript/Python, NestJS·FastAPI·Next.js, PostgreSQL·Redis, AWS. 상세와 �
 2. 새로 만들어진 저장소를 클론해서 `mastery/README.md`부터 읽고 인터뷰를 진행한다.
 3. `mastery/01-docs-blueprint/`에서 하네스 설정을 확정한다.
 4. `docs/`를 실제 프로젝트 문서 루트로 쓰기 시작한다.
+5. 저장소 루트에 `AGENTS.md`(또는 Claude Code라면 `CLAUDE.md`가 `@AGENTS.md`를 import)를 만들어 `docs/AGENTS.md`로 링크한다 — Cursor/Copilot/Windsurf 등 여러 AI 코딩 도구가 프로젝트 컨텍스트를 자동 인식하는 표준 위치는 루트이지, `docs/` 하위가 아니다 (근거: [docs/00-control-tower/external-reference-survey.md](docs/00-control-tower/external-reference-survey.md#조사-2--경쟁-ai-코딩-에이전트의-프로젝트-컨텍스트-관례)).
 
 ## 이 문서 체계 자체도 규칙이 아니다
 

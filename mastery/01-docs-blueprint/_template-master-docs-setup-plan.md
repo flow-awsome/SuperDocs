@@ -9,6 +9,8 @@
 
 (00-initial-intake/01-project-questionnaire.md에서 요약)
 
+> 이 절은 spec-kit류 오픈소스 프로젝트가 쓰는 `constitution.md`(모든 후속 산출물의 기준점이 되는 단일 원칙 문서)와 같은 역할을 한다 — 별도 파일을 새로 만들지 않고 이미 이 위치가 그 기능을 하고 있음을 외부 조사로 확인했다. 근거: [docs/00-control-tower/external-reference-survey.md — 조사 10](../../docs/00-control-tower/external-reference-survey.md#조사-10--경쟁-스펙-기반에이전트-네이티브-스캐폴딩).
+
 - 서비스 한 줄 정의:
 - 핵심 사용자:
 - 이번 페이즈 우선순위 (완결성 vs 속도, 비용 vs 성능):

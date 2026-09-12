@@ -12,6 +12,12 @@
 | [03-system-definition](03-system-definition/README.md) | 무엇이 아닌가 | 용어집, 도메인 모델 정의, 비목표/경계 |
 | [04-system-instructions](04-system-instructions/README.md) | AI는 어떻게 행동하는가 | 에이전트 운영 규칙, 스킬 사용 정책 |
 
+## 왜 이렇게 구성됐는가 (업계 표준과의 대응)
+
+이 5단 구조는 임의로 정한 것이 아니라 arc42(00~03이 arc42 1~8장 "현재 상태", 07-decisions가 arc42 9장 "결정")와 4+1 뷰 모델(01-system-composition≈Development view, 02-system-logic≈Process/Logical view)에 대응한다. C4 모델 기준으로 01-system-composition은 Container/Component 레벨까지 다루지만 Context 레벨(외부 시스템·행위자 경계)은 [service-boundary-map.md](01-system-composition/service-boundary-map.md)에 별도로 명시한다.
+
+04-system-instructions(AI 에이전트 운영 규칙)는 이 표준들 어디에도 없는 SuperDocs 고유 확장이다 — AI 에이전트가 개발 주체로 참여하는 이 하네스의 전제 때문에 추가됐다. 근거: [00-control-tower/external-reference-survey.md — 조사 3](../00-control-tower/external-reference-survey.md#조사-3--아키텍처-문서화-표준-arc42--c4--41).
+
 ## 갱신 원칙
 
 - 이 폴더는 **현재 상태(is)**를 담는다. "왜 이렇게 결정했는가"는 [07-decisions](../07-decisions/README.md), "어떻게 바뀌어왔는가"는 [06-history](../06-history/README.md)에 있다.

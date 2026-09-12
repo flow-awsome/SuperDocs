@@ -16,6 +16,20 @@
 | [07-manual-verification-checklist](07-manual-verification-checklist/README.md) | 수동 검증 체크리스트 | 자동화 안 된 항목 |
 | [08-verification-setup](08-verification-setup/README.md) | 검증 세팅 방법 | 테스트 환경 구축 가이드 |
 
+## 자동화 비율 목표
+
+업계 관행(성숙한 팀 기준)을 참고한 기본값 — 프로젝트 성격에 따라 [mastery/00-initial-intake](../../mastery/00-initial-intake/README.md)에서 조정한다. 근거: [00-control-tower/external-reference-survey.md — 조사 7](../00-control-tower/external-reference-survey.md#조사-7--테스트검증-문서-표준).
+
+| 유형 | 목표 비율 |
+|---|---|
+| [01-unit-verification](01-unit-verification/README.md) | 70% |
+| [02-integration-verification](02-integration-verification/README.md) | 20% |
+| [03-scenario-verification](03-scenario-verification/README.md) (E2E) | 10% |
+
+## 요구사항 ↔ 검증 추적 (경량 RTM)
+
+정식 요구사항 추적 매트릭스 도구(Jira/TestRail 등) 없이도, 어떤 시나리오가 어떤 검증으로 커버되는지 최소한으로 연결한다. [02-scenario/01-feature-scenarios](../02-scenario/01-feature-scenarios/README.md)의 각 기능 문서에 "검증: [05-test/...]" 역링크를 남기는 것으로 대체하고, 별도 매트릭스 파일은 만들지 않는다 (문서 중복 방지 원칙).
+
 ## 검증 결과 기록 원칙
 
 - 검증 통과/실패 결과 자체는 CI 로그가 진실이다. 이 폴더는 "무엇을 어떻게 검증하는가"의 기준과, 반복적으로 문제가 되는 케이스를 남긴다.
